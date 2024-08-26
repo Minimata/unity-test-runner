@@ -74,6 +74,7 @@ const Docker = {
       testMode === 'all' ? ['playmode', 'editmode', 'COMBINE_RESULTS'] : [testMode]
     ).join(';');
 
+    return `ls -la ${actionFolder}/platforms/ubuntu`
     return `docker run \
             --workdir /github/workspace \
             --cidfile "${cidfile}" \
